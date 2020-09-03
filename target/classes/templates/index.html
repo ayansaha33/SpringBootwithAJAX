@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Spring Boot with Raphael Js implementation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link rel="stylesheet" type="text/css"
+          href="webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+          <script type="text/javascript"
+        src="webjars/jquery/2.2.4/jquery.min.js">
+		</script>
+        <script src="raphael-min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="g.raphael.js" type="text/javascript" charset="utf-8"></script>
+        <script src="g.pie.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Flight Ticketing Count Report</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container" style="min-height: 500px">
+
+    <div class="starter-template">
+        <h1>Spring Boot AJAX Example</h1>
+
+        <div id="holder"></div>
+        <div id="chartdraw"></div>
+
+        <form class="form-horizontal" id="search-form">
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" id="bth-search"
+                            class="btn btn-primary btn-lg">Get Success Count on Source
+                    </button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+</div>
+
+<div class="container">
+    <footer>
+        <p>
+            © <a href="https://www.dreamscapeofayan.com/">Ayan Saha</a> 2020
+        </p>
+    </footer>
+</div>
+        <script type="text/javascript" src="bookingCount.js"></script>
+</body>
+</html>
