@@ -4,6 +4,8 @@ $(document).ready(function () {
 
         //stop submit the form, we will post it manually.
         event.preventDefault();
+		$( "#records-table" ).empty();
+		$( "#chartdraw" ).empty();
 
         fire_ajax_submit();
 		populatechart();

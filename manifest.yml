@@ -1,0 +1,7 @@
+---
+applications:
+ - name: AirlinesTicketingSystem
+   random-route: true
+   path: target/airlinesticketingsystem.war
+   memory: 256M
+   instances: 1

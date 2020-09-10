@@ -2,17 +2,16 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Spring Boot with Raphael Js implementation</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
-    <link rel="stylesheet" type="text/css"
-          href="webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
-          <script type="text/javascript"
-        src="webjars/jquery/2.2.4/jquery.min.js">
-		</script>
-        <script src="raphael-min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="g.raphael.js" type="text/javascript" charset="utf-8"></script>
-        <script src="g.pie.js" type="text/javascript" charset="utf-8"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	
+    
 </head>
 <body>
 
@@ -24,26 +23,59 @@
     </div>
 </nav>
 
-<div class="container" style="min-height: 500px">
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header">
+				<h1>
+					<small>Raphael JS Line Chart Demo</small>
+				</h1>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			
+			<div id="holder"></div>
+			<div id="chartdraw"></div>
 
-    <div class="starter-template">
-        <h1>Spring Boot AJAX Example</h1>
+		</div>
+		<div class="col-md-4">
+			<table id="records-table" class="table table-sm table-hover table-bordered">
+				<thead>
+					<tr>
+						<th>
+							Source Location
+						</th>
+						<th>
+							Successful Booking Count
+						</th>
+						<th>
+							Cancelled Booking Count
+						</th>
+					</tr>
+				</thead>
+				<tbody id="dynamic-data">
+				
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-4">
 
-        <div id="holder"></div>
-        <div id="chartdraw"></div>
-
-        <form class="form-horizontal" id="search-form">
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" id="bth-search"
-                            class="btn btn-primary btn-lg">Get Success Count on Source
-                    </button>
-                </div>
-            </div>
-        </form>
-
-    </div>
-
+		<form class="form-horizontal" id="line-chart-form">
+			<div class="form-group2"> 
+					<button type="submit" id="line-chart-btn" class="btn btn-success btn-block active btn-lg">
+					LineChart
+					</button>
+			</div>
+		</form>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			
+		</div>
+	</div>
 </div>
 
 <div class="container">
@@ -53,6 +85,17 @@
         </p>
     </footer>
 </div>
-        <script type="text/javascript" src="bookingCount.js"></script>
+		<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+		<script src="js/raphael-min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/g.raphael.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/g.pie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/g.bar.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/g.dot.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/g.line.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/scripts.js"></script>
+        <script type="text/javascript" src="bookingbarchart.js"></script>
+        <script type="text/javascript" src="linechart.js"></script>
 </body>
 </html>

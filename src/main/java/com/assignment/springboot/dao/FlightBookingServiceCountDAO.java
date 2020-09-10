@@ -10,7 +10,7 @@ import com.assignment.springboot.model.FlightBookingCountModel;
 @Mapper
 public interface FlightBookingServiceCountDAO {
 
-	@Select("SELECT source_location, SUM(successful_booking_count) as 'total_Successful_Booking' FROM pss.Booking_Count where Source_location\r\n" + 
+	@Select("SELECT source_location, SUM(successful_booking_count) as 'total_Successful_Booking',SUM(cancelled_booking_count) as 'total_Cancelled_Booking' FROM pss.Booking_Count where Source_location\r\n" + 
 			"in('Kolkata','Mumbai','Chennai','Delhi') group by source_location")
 	public List<FlightBookingCountModel> getCountOfsuccessfullBookingInSource();
 
